@@ -1,0 +1,107 @@
+<h4>Student Details</h4>
+<div [hidden]="submitted" style="width:50%;margin:50px">
+    <form #detailStudentForm="ngForm">
+        <div class="form-group">
+            <label for="Sno">Sno.</label>
+            <input type="text" class="form-control" id="Sno" placeholder="Give Serial number" required [(ngModel)]="student.Sno" name="Sno" #Sno="ngModel">
+            <div [hidden]="Sno.valid || Sno.pristine" class="alert alert-danger">
+                Serial number is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="studentName">Student Name</label>
+            <input type="text" class="form-control" id="studentName" placeholder="Give Student's Name" required [(ngModel)]="student.Student_Name" name="studentName" #studentName="ngModel">
+            <div [hidden]="studentName.valid || studentName.pristine" class="alert alert-danger">
+                Student Name is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="fathersName">Father's Name</label>
+            <input type="text" class="form-control" id="fathersName" placeholder="Give Father's Name" required [(ngModel)]="student.Father_Name" name="fathersName" #fathersName="ngModel">
+            <div [hidden]="fathersName.valid || fathersName.pristine" class="alert alert-danger">
+                fathers Name is required
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date Of Birth</label>
+            <input type="text" class="form-control" id="dob" placeholder="Give DOB" required [(ngModel)]="student.DOB" name="dob" #dob="ngModel">
+            <div [hidden]="dob.valid || dob.pristine" class="alert alert-danger">
+                DOB is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Give Address" required [(ngModel)]="student.Address" name="address" #address="ngModel">
+            <div [hidden]="address.valid || address.pristine" class="alert alert-danger">
+                address is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" placeholder="Give City Name" required [(ngModel)]="student.City" name="city" #city="ngModel">
+            <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+                city is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" placeholder="Give State's Name" required [(ngModel)]="student.State" name="state" #state="ngModel">
+            <div [hidden]="state.valid || state.pristine" class="alert alert-danger">
+                state is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pin">Pin</label>
+            <input type="text" class="form-control" id="pin" placeholder="Give PIN code" required [(ngModel)]="student.Pin" name="pin" #pin="ngModel">
+            <div [hidden]="pin.valid || pin.pristine" class="alert alert-danger">
+                pin is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phoneNo">Phone No</label>
+            <input type="text" class="form-control" id="phoneNo" placeholder="Give Phone number" required [(ngModel)]="student.Phone_Number" name="phoneNo" #phoneNo="ngModel">
+            <div [hidden]="phoneNo.valid || phoneNo.pristine" class="alert alert-danger">
+                phoneNo is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Give Student's Email" required [(ngModel)]="student.Email" name="email" #email="ngModel">
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                email is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="classOpted">Class Opted</label>
+            <input type="text" class="form-control" id="classOpted" placeholder="Give Student's Class opted" required [(ngModel)]="student.Class_Opted" name="classOpted" #classOpted="ngModel">
+            <div [hidden]="classOpted.valid || classOpted.pristine" class="alert alert-danger">
+                Class Opted is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="marks">Marks</label>
+            <input type="text" class="form-control" id="marks" placeholder="Give Student's Marks" required [(ngModel)]="student.Marks" name="marks" #marks="ngModel">
+            <div [hidden]="marks.valid || marks.pristine" class="alert alert-danger">
+                marks is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="dateEnrolled">Date Enrolled</label>
+            <input type="text" class="form-control" id="dateEnrolled" placeholder="Give Student's Enrollement Date" required [(ngModel)]="student.Date_Enrolled" name="dateEnrolled" #dateEnrolled="ngModel">
+            <div [hidden]="dateEnrolled.valid || dateEnrolled.pristine" class="alert alert-danger">
+                Date Enrolled is required
+            </div>
+        </div>
+
+        <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+            <button type="button" class="btn btn-dark" (click)="update()">Update</button>
+        </div>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <p>{{message}}</p>
+</div>

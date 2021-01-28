@@ -1,0 +1,26 @@
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>SNo.</th>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Class</th>
+            <th>Marks</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stud of students">
+            <th>{{ stud.Sno }}</th>
+            <td>{{ stud.Student_Name }}</td>
+            <td>{{ stud.Email }}</td>
+            <td>{{ stud.Phone_Number}}</td>
+            <td>{{ stud.Class_Opted }}</td>
+            <td>{{ stud.Marks }}</td>
+            <td>
+                <button class="btn" type="button" [routerLink]="['/students', stud.Sno]">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
